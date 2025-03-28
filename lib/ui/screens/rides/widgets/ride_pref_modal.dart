@@ -10,16 +10,11 @@ class RidePrefModal extends StatefulWidget {
 
   final RidePreference? initialPreference;
 
-  @override
-  State<RidePrefModal> createState() => _RidePrefModalState();
-}
-
-class _RidePrefModalState extends State<RidePrefModal> {
-  void onBackSelected() {
+  void onBackSelected(BuildContext context) {
     Navigator.of(context).pop();
   }
 
-  void onSubmit(RidePreference newPreference) {
+  void onSubmit(BuildContext context, RidePreference newPreference) {
     Navigator.of(context).pop(newPreference);
   }
 
@@ -36,7 +31,10 @@ class _RidePrefModalState extends State<RidePrefModal> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Back icon
-            BlaIconButton(onPressed: onBackSelected, icon: Icons.close),
+            BlaIconButton(
+              onPressed: () => onBackSelected(context), 
+              icon: Icons.close
+            ),
             SizedBox(height: BlaSpacings.m),
 
             // Title
@@ -50,8 +48,8 @@ class _RidePrefModalState extends State<RidePrefModal> {
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: RidePrefForm(
-                  initialPreference: widget.initialPreference,
-                  onSubmit: onSubmit,
+                  initialPreference: initialPreference,
+                  onSubmit: (pref) => onSubmit(context, pref),
                 ),
               ),
             ),
@@ -59,5 +57,11 @@ class _RidePrefModalState extends State<RidePrefModal> {
         ),
       ),
     );
+  }
+  
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }
 }
