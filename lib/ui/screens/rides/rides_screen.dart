@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../model/ride/ride_filter.dart';
-import '../../../provider/async_value.dart';
-import '../../../provider/rides_preferences_provider.dart';
+import '../../provider/async_value.dart';
+import '../../provider/rides_preferences_provider.dart';
 import '../../widgets/errors/bla_error_screen.dart';
 import 'widgets/ride_pref_bar.dart';
 

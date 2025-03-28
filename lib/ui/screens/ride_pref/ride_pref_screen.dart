@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../model/ride/ride_pref.dart';
-import '../../../provider/async_value.dart';
-import '../../../provider/rides_preferences_provider.dart';
+import '../../../utils/animations_util.dart';
+import '../../provider/rides_preferences_provider.dart';
 import '../../theme/theme.dart';
 import '../../widgets/errors/bla_error_screen.dart';
-import '../../../utils/animations_util.dart';
 import '../rides/rides_screen.dart';
 import 'widgets/ride_pref_form.dart';
 import 'widgets/ride_pref_history_tile.dart';

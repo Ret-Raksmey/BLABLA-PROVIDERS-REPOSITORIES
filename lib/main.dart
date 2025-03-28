@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'provider/rides_preferences_provider.dart';
+import 'ui/provider/rides_preferences_provider.dart';
 import 'repository/mock/mock_locations_repository.dart';
 import 'repository/mock/mock_ride_preferences_repository.dart';
 import 'repository/mock/mock_rides_repository.dart';
